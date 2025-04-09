@@ -77,4 +77,4 @@ echo.
 echo ==============================================
 echo  Git Uploader - Upload Complete!
 echo ==============================================
-pause
+rem pause
