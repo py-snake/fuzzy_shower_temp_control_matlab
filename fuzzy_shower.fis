@@ -13,45 +13,45 @@ DefuzzMethod='centroid'
 
 [Input1]
 Name='error'
-Range=[-20 20]
+Range=[-50 50]
 NumMFs=5
-MF1='NegativeHigh':'trimf',[-20 -20 -5]
-MF2='NegativeLow':'trimf',[-10 -2.5 0]
-MF3='Zero':'trimf',[-2.5 0 2.5]
-MF4='PositiveLow':'trimf',[0 2.5 10]
-MF5='PositiveHigh':'trimf',[5 20 20]
+MF1='NegativeHigh':'trimf',[-50 -50 -20]
+MF2='NegativeLow':'trimf',[-30 -15 0]
+MF3='Zero':'trimf',[-10 0 10]
+MF4='PositiveLow':'trimf',[0 15 30]
+MF5='PositiveHigh':'trimf',[20 50 50]
 
 [Input2]
 Name='error_rate'
-Range=[-5 5]
+Range=[-15 15]
 NumMFs=3
-MF1='Negative':'trimf',[-5 -5 0]
-MF2='Zero':'trimf',[-1 0 1]
-MF3='Positive':'trimf',[0 5 5]
+MF1='Negative':'trimf',[-15 -5 0]
+MF2='Zero':'trimf',[-2 0 2]
+MF3='Positive':'trimf',[0 5 15]
 
 [Output1]
 Name='hot_delta'
-Range=[-0.2 0.2]
+Range=[-1 1]
 NumMFs=5
-MF1='CloseHigh':'trimf',[-0.2 -0.2 -0.05]
-MF2='CloseLow':'trimf',[-0.1 -0.025 0]
-MF3='NoChange':'trimf',[-0.01 0 0.01]
-MF4='OpenLow':'trimf',[0 0.025 0.1]
-MF5='OpenHigh':'trimf',[0.05 0.2 0.2]
+MF1='CloseHigh':'trimf',[-1 -1 -0.3]
+MF2='CloseLow':'trimf',[-0.5 -0.2 0]
+MF3='NoChange':'trimf',[-0.1 0 0.1]
+MF4='OpenLow':'trimf',[0 0.2 0.5]
+MF5='OpenHigh':'trimf',[0.3 1 1]
 
 [Output2]
 Name='cold_delta'
-Range=[-0.2 0.2]
+Range=[-1 1]
 NumMFs=5
-MF1='CloseHigh':'trimf',[-0.2 -0.2 -0.05]
-MF2='CloseLow':'trimf',[-0.1 -0.025 0]
-MF3='NoChange':'trimf',[-0.01 0 0.01]
-MF4='OpenLow':'trimf',[0 0.025 0.1]
-MF5='OpenHigh':'trimf',[0.05 0.2 0.2]
+MF1='CloseHigh':'trimf',[-1 -1 -0.3]
+MF2='CloseLow':'trimf',[-0.5 -0.2 0]
+MF3='NoChange':'trimf',[-0.1 0 0.1]
+MF4='OpenLow':'trimf',[0 0.2 0.5]
+MF5='OpenHigh':'trimf',[0.3 1 1]
 
 [Rules]
-1 3, 1 5 (1) : 1
-2 2, 2 4 (1) : 1
+5 0, 5 1 (1) : 1
+4 2, 4 2 (1) : 1
 3 2, 3 3 (1) : 1
-4 1, 4 2 (1) : 1
-5 1, 5 1 (1) : 1
+2 2, 2 4 (1) : 1
+1 0, 1 5 (1) : 1
